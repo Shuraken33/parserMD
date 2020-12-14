@@ -1,0 +1,29 @@
+using System;
+
+namespace LR5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            checked
+            {
+                try
+                {
+                    int x;
+                    x = Convert.ToInt32(Console.ReadLine());
+                    while (true)
+                    {
+                        x = x * x;
+                        Console.WriteLine(x);
+                    }
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Произошло переполнение!");
+                }
+            }
+            
+        }
+    }
+}
